@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>“碳中和”正在成为风尚</title>
+	<style>
+	<!--
+		.text{font-size:20px;text-indent: 2em;}/*文字样式*/
+		.special{font-size: 25px;color: #CA672C;}/*特殊字体样式*/
+		.boxone{margin-left: 250px;margin-right: 250px;margin-top: 50px;}
+		.boxtwo{margin-left: 250px;margin-right: 250px;height: 200px;}
+		.boxthree{margin-left: 270px;margin-right: 250px;height: 200px;margin-top:450px;}
+		.boxfour{margin-left: 250px;margin-right: 250px;height: 200px;margin-top:400px;}
+		
+		/*图片自动播放框*/
+		#parent{width: 800px;height: 500px;overflow: hidden;margin: 10px auto;float: left;}
+		#div-img{width: 4000px;animation:img_move 15s ease-out infinite;}
+		@keyframes img_move{0%,25%{margin-left: 0;}
+							25%,50%{margin-left: -800px;}
+							50%,75%{margin-left: -1600px;}
+							75%,100%{margin-left: -2400px;};}
+		
+		.buttonone{float:left;width: 150px;height: 100px;margin-left: 200px;margin-top: 230px;}
+		.buttontwo{float:left;width: 150px;height: 350px;margin-top: 230px;}/*左右按钮设置*/
+		
+		body {background-image: url("../../img/background.png");background-repeat: repeat;}
+
+		/*超链接样式*/
+		a:link {color: #157225;text-decoration: none;}
+   		a:visited {text-decoration: none;}
+		a:hover {text-decoration: underline;}
+		a:active {text-decoration: none;}
+
+	-->
+	</style>
+	<script src="../../js/echarts.min.js"></script>
+</head>
+
+<body>
+
+<section1>
+<div>
+	<!--全球环境概况-->
+  <div class="boxone">
+	<p class="text">
+	全球生态环境问题指对全球产生直接影响的，或具有普遍型，随后又发展成为对全球造成危害的环境问题，也就是引起全球范围内生态环境退化的问题。如今<em><strong class="special">温度升高、虫害增多、土地沙漠化、臭氧层破坏、酸雨</strong></em> 等全球性大气环境问题弥漫在我们的生活中，究其根本，不难看出，这与我们日渐飙升的碳排放量有关系。 </p>
+	</div>
+	
+	<div class="buttonone"><img src="../../img/lefticon.png" width="150" height="100" alt="左按钮"/></div>
+	
+		<!--图片自动播放-->
+  <div id="parent">
+		<div id="div-img">
+    <img src="../../img/temperature.jpg" width="800" height="500" alt="温度升高"/> 
+	<img src="../../img/insec.jpg" width="800" height="500" alt="虫害增加"/>
+	<img src="../../img/Desertification.jpg" width="800" height="500" alt="土地沙漠化"/>
+	<img src="../../img/drought2.jpg" width="800" height="500" alt="干旱"/>
+		</div>
+  </div>
+	
+  <div class="buttontwo"><img src="../../img/righticon.png" width="150" height="100" alt="右按钮"/></div>
+	
+	<!--全球二氧化碳排放量-->
+	<div class="boxtwo">
+		<p class="text" style="text-align:center">那么我们下面就来看看近年来全球二氧化碳的排放量。</p>
+	</div>
+	
+		<!--二氧化碳折线图-->
+<div class="boxthree">
+			 <div id="main" style="width: 1000px;height:600px;"></div>
+	 <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+ 
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+	 title: {
+                text: '1960-2015全球二氧化碳排放量'
+            },
+            tooltip: {},
+            legend: {
+                data:['排放量']
+            },
+    xAxis: {
+        type: 'category',
+        data: ['1960', '1965', '1970', '1975', '1980', '1985', '1990', '1995', '2000', '2005', '2010','2015']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+		name: '排放量',
+        data: [9213447.523, 11100889.809, 14868220.289, 17175195.209, 19856785.498, 20862411.952,22421693.577,23918172.187,28043870.885,31927786.123,34040671.315],
+        type: 'line',
+        smooth: true
+    }]
+};
+
+option && myChart.setOption(option);
+
+    </script>
+</div>
+
+	<!--解释碳中和-->
+  <div class="boxfour">
+	<a href="../../img/tandafeng.png">
+		<p class="text">那么什么是碳中和呢？</p>
+	</a><br>
+	<p class="text">目前，人类面临的全球性问题是气候变化，随着各国<strong class="special"><em>二氧化碳排放，温室气体猛增，</em></strong>对生命系统形成威胁。在这一背景下，世界各国以全球协约的方式减排温室气体，我国由此提出碳达峰和碳中和目标。碳排放与经济发展密切相关，经济发展需要消耗能源。暨南大学环境与气候研究院院长邵敏介绍，“碳达峰”就是我们国家承诺在<em><strong class="special">2030</strong></em> 年前，二氧化碳的排放不再增长，达到峰值之后再慢慢减下去；而到<em><strong class="special">2060</strong></em> 年，针对排放的二氧化碳，要采取植树、节能减排等各种方式全部抵消掉，这就是<em><strong class="special">“碳中和”</strong></em>。
+	</p>	
+  </div>
+</div>
+</section1>
+
+</body>
+</html>

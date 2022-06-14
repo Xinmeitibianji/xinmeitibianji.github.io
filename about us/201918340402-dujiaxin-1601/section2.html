@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>大国的责任与担当</title>
+	<style>
+	<!--
+		.text{font-size:20px;text-indent:2em;}/*文字样式*/
+		.special{font-size: 25px;color: #CA672C;}/*特殊字体样式*/
+		
+		.boxfive{margin-left: 250px;margin-right: 250px;margin-top: 50px;}
+		.boxsix{margin-left: 300px;margin-right: 50px;margin-top: 80px;}
+		.boxseven{margin-left: 150px;margin-right:250px;margin-top: 80px;}
+		.boxeight{margin-left: 150px;margin-right:250px;}
+
+
+		/*背景图*/
+		body {background-image: url("../../img/background.png");background-repeat: repeat;}
+	-->
+	</style>
+	
+	<!-- 引入 ECharts折线图文件 -->
+    <script src="../../js/echarts.min.js"></script>
+	
+	<!--时间轴-->
+		<link rel="stylesheet" href="../../css/swiper.min.css">
+		<link rel="stylesheet" href="../../css/style3.css">
+		<script src="../../js/swiper.min.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+	<!--各省在行动-->
+	<link rel="stylesheet" href="../../css/style4.css">
+</head>
+
+	
+<body>
+<div>
+<section2>
+<!--主要经济体碳排放预期速率对比-->
+<div class="boxfive">
+		<p class="text">  未来，中国推进碳中和的速度将远快于欧美，减排任务的艰巨程度史无前例。《自然》的研究成果指出，15个已知的全球气候临界点，已有9个被激活。在这样的大背景下，世界其他主要经济体也纷纷显示其减排决心：欧盟和美国都表示在2050年实现碳中和。然而欧盟已于1979年碳达峰，美国于2005年达峰，各自有71年和45年的时间从峰值走向净零排放。作为世界上最大的发展中国家，中国“<em><strong>2030碳达峰、2060碳中和</strong></em>”的决心要求 仅用<em><strong class="special">30年</strong></em> 从峰值降至<em><strong class="special">零</strong></em> 排放，中国的中和斜率会远陡峭于欧美，减排速度要超出欧盟<em><strong class="special">一倍</strong></em>，未来四十年的碳中和任务时间紧、任务重。</p>
+	</div>
+	
+	
+	<!--预期速率折线图-->
+	<div class="boxsix">
+	<div id="main" style="width: 900px;height:600px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+      var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    title: {
+        text: '预期速率对比'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data: ['中国', '美国', '欧盟', '日本']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['2000', '2010', '2020', '2030', '2040', '2050', '2060']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+		 {
+            name: '日本',
+            type: 'line',
+            stack: '总量',
+            data: [1198,1130,1154,770,385,0]
+        },
+		  {
+            name: '欧盟',
+            type: 'line',
+            stack: '总量',
+            data: [3933,3646,3333,2222,1111,0]
+        },
+		 {
+            name: '美国',
+            type: 'line',
+            stack: '总量',
+            data: [6446,6041,5794,3863,1931,0]
+        },
+        {
+            name: '中国',
+            type: 'line',
+            stack: '总量',
+            data: [4249,9872,9719,11600,7733,3867,0]
+        },  
+    ]
+};
+option && myChart.setOption(option);
+    </script>
+</div>
+	
+<!--四十年的四个阶段-->	
+<div class="boxseven">
+	<p class="text">根据<em><strong class="special">“3060”</strong></em>目标，从时间维度上看，可分为<em><strong class="special">四个十年</strong></em>，期间包括八个五年规划。而依据减排工作部署，四个十年分别对应转型过渡蓄势、能源结构切换、近零排放发力、全面中和决胜四个阶段。</p>
+</div>
+	
+	<!--四十年时间轴-->
+    <div class="main">
+        <div class="title">四个十年</div>
+        <div class="w-imgText" id="imgText">
+            <div class="swiperBox">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide" data-title="第一阶段">
+                        <div class="item">
+                            <div class="imTB">
+                                <div class="img">
+                                    <img src="../../img/1.jpg">
+                                </div>
+                                <div class="textB">
+                                    <div class="bg_x"></div>
+                                    <div class="text_x">
+                                        <div class="tt_h">转型过渡蓄势（2010-2030年）</div>
+                                        <p>在这一阶段的主要任务是凝成共识，建设性引导经济转型过渡。各主体应提高思想认识，正确理解碳达峰、碳中和两大目标及其内在关联性，认识到碳达峰这一拐点在整体战略部署中的阶段性功能，紧守行业、地区减排任务红线，谨防“碳达峰”变为“攀高峰”。迈向零碳——基于科技创新的绿色变革这一阶段内含两个五年规划，分别需要紧抓以下战略要点：“十四五”期间侧重基础工作与过渡转型两点。碳达峰、碳中和基础工作包括“摸清家底”，推进碳核算工作，为减排工作提供数据支撑；以及储备新技术，引导资金、人才等生产要素流向减排领域，刺激技术开发与改进。同时，转变发展模式必然经历改革阵痛期，“十四五”期间要做好“缓冲” 工作，给予企业至少 5 年的适应与转型过渡时间。 “十五五”期间要在控制碳排放方面，出台更为严格严厉的指标和惩罚措施。“十四五” 给予过渡适应时间是为了削减转型阵痛期带来的负面影响，但在时间紧、任务重的背景下，“十五五”期间应压实减排责任，通过制定更为严格的指标和严厉的惩罚举措，倒逼各方主 体形成战略主动，保证碳达峰拐点出现，以及碳排放从平台期向持续下降阶段转变完成。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        <a href="#"></a></div>
+                    </li>
+                    <li class="swiper-slide" data-title="第二阶段">
+                        <div class="item">
+                            <div class="imTB">
+                                <div class="img">
+                                    <img src="../../img/scenery1.jpg">
+                                </div>
+                                <div class="textB">
+                                    <div class="bg_x"></div>
+                                    <div class="text_x">
+                                        <div class="tt_h">能源结构切换期（2031-2040年）</div>
+                                        <p>成本控制，是这一阶段的战略要点。革新能源生产与消费方式，确保可再生能源发电成本低于煤电，让新能源成为经济增长的“引擎”，弱化经济增长与化石燃料消耗关联性。根据国际能源署（IEA）2017 年能源展望报告预测，在考虑实现环境质量改善，可靠及可持续获得现代能源以及气温升幅不超 2 度等多重目标作用下，采取更加严格的节能标准、碳交易、CCS 等政策技术情形下，2040 年中国能源相关的碳排放可能下降到 2001年水平。颠覆性低碳技术的出现与应用、更为系统灵活的能源手段应成为“十六五”“十七五” 的关键词。“十六五”要做好低碳能源成本控制，必须依仗新技术力量，通过低碳技术革新 与应用，排解系统成本增长压力。能源转型委员会研究表明，到 2035 年零碳发电系统成本仅为 31 美元/MWh，远低于火电为主的系统成本。“十七五”应将重点放在不同低碳技术与供能方式的协同发展，提高能源系统整体灵活性。通过扩大电力区域调度范围、优化跨省电力输送负荷、火电灵活性改造等手段，协同生物质能发电、燃煤厂加装 CCS 装置，构建更为低碳、灵活的能源供给系统。 </p>
+                                    </div>
+                                </div>
+                            </div>
+                        <a href="#"></a></div>
+                    </li>
+                    <li class="swiper-slide" data-title="第三阶段">
+                        <div class="item">
+                            <div class="imTB">
+                                <div class="img">
+                                    <img src="../../img/scenery2.jpg" >
+                                </div>
+                                <div class="textB">
+                                    <div class="bg_x"></div>
+                                    <div class="text_x">
+                                        <div class="tt_h">近零排放发力期（2041-2050年）</div>
+                                        <p>采取严格标准和更多资源投放，超前部署长期目标成为这一阶段的要点。清华大学气候变化与可持续发展研究院《中国长期低碳发展战略与转型路径研究》综合报告（简称清华报告）提出，2050 要基本实现二氧化碳净零排放，全部温室气体减排约 90%，这一深度脱碳目标的实现需要坚实的产业基 础与技术“打好地基”，引导资源持续流向减排领域。同时，完成长期目标的超前部署和规划，提供更为全面的政策保障和良好的市场环境。实现电力系统的碳中和是“十八五”核心要点。中国能源研究会常务理事李俊峰介绍，按照国际惯例，电力的碳中和一般要早于一个国家和一个地区的碳中和大概 10-15 年。依据 2060 年我国实现整体碳中和目标，电力系统需要尽量在 2045 年左右要实现碳中和。可通过光伏发电、风电成为主要发电方式，实现能源结构多元化及电力供需平衡高度耦合，推动储能高度发展等手段，迈向电力碳中和道路。 “十九五”要实现经济社会发展与二氧化碳脱钩，单位 GDP 能耗达全球领先水平。清华报告提出，到 2050 年 GDP 总量将比 2005 年增加 10 倍以上，单位 GDP 的能源强度将比2005 下降80%以上，二氧化碳强度下降超 95%，实现这一目标需要更大规模的资金投入和成本代价，同时进行超前部署，进一步加强非二氧化碳温室气体减排和采用 BECCS 技术等负排放措施，为碳中和目标实现做好最后的冲刺准备。 </p>
+                                    </div>
+                                </div>
+                            </div>
+                        <a href="#"></a></div>
+                    </li>
+					<li class="swiper-slide" data-title="第四阶段">
+                        <div class="item">
+                            <div class="imTB">
+                                <div class="img">
+                                    <img src="../../img/scenery3.jpg">
+                                </div>
+                                <div class="textB">
+                                    <div class="bg_x"></div>
+                                    <div class="text_x">
+                                        <div class="tt_h">全面中和决胜期（2051-2060年）</div>
+                                        <p>基本建成零碳产业、零碳经济、零碳社会、零碳国家，开启多维度综合成本效益评估的“负碳”征程是这一阶段的战略要点。在此阶段，减排“马拉松”接近尾声，一旦松懈，前期努力将功亏一篑，因此需要各参与主体继续咬紧牙关，取下碳中和最终胜利。此外，减排网络已有序运行，减排成本的下降有利于负排放技术的开发与大规模应用，同时减排的成果能为搭建负排放技术成本—效益评估体系提供重要参考。“二十五”应实现全社会碳排放净零。在这一时期内，以深度脱碳、碳捕集和封存技术、增加森林碳汇为工作重点，助推能源和电力生产进入负碳阶段，实现全社会碳排放净零。“二十一五”要关注负排放，控制和减少累积碳排放量。这一阶段已基本完成能源替代工作，深度脱碳的要求将会刺激负排放技术广泛启用。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        <a href="#"></a></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="igt_page"></div>
+        </div>
+        <div class="igt_page_text">
+            <ul class="clearfix">
+            </ul>
+        </div>
+        <script type="text/javascript">
+        $(function(){
+            var imgTextId=$('#imgText');
+            var swiperId=imgTextId.find('.swiperBox');
+            var pagediv=imgTextId.find('.igt_page');
+            var igtli=imgTextId.find('li');
+            var igtliW=100*1.0/igtli.length + '%';
+            var titles=[];
+            var _html = ''; 
+            igtli.each(function (index) { 
+                var title=$(this).attr('data-title');
+                if(index===0){
+                    _html += '<li class="igt_li on" style="width:' + igtliW  + ';"><div class="item_span"><div class="adore"></div><div class="num">0' + (index+1) + '</div><div class="tit">' + title + '</div></div></li>';
+                }else{
+                    _html += '<li class="igt_li" style="width:' + igtliW  + ';"><div class="item_span"><div class="adore"></div><div class="num">0' + (index+1) + '</div><div class="tit">' + title + '</div></div></li>';
+                } 
+            });
+            imgTextId.siblings('.igt_page_text').find('ul').append(_html);
+            var swiper1 = new Swiper(swiperId, {
+                effect : 'slide', 
+                autoplay : {
+                    delay:8000,//滚动速度
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: pagediv,
+                    type: 'custom',
+                    renderCustom: function (swiper, current, total) {
+                        return '<span class="on">0' + current + '</span><span>/</span><span>0' + total + '</span>';
+                    }
+                },
+              on:{
+                slideChange: function(){
+                    var index = this.activeIndex;
+                    imgTextId.siblings('.igt_page_text').find('li').eq(index).addClass('on').find('.adore').addClass('bg_main');
+                    imgTextId.siblings('.igt_page_text').find('li').eq(index).siblings('li').removeClass('on').find('.adore').removeClass('bg_main');
+                }
+              }
+            })
+            imgTextId.siblings('.igt_page_text').on('click','li',function(){ 
+                if (!$(this).hasClass('on')){
+                    var thisI = $(this).index();
+                    $(this).addClass('on').find('.adore').addClass('bg_main');
+                    $(this).siblings('li').removeClass('on').find('.adore').removeClass('bg_main');
+                    swiper1.slideTo(thisI, 1000, false);
+                }
+                
+            });
+        })
+      </script>     
+    </div>
+	
+<!--各省在行动-->
+<div>
+	<h1>各省在行动</h1>
+	<script id="v-carousel" type="x/template">  
+  <div class="card-carousel-wrapper">
+    <div class="card-carousel--nav__left" @click="moveCarousel(-1)" :disabled="atHeadOfList"></div>
+    <div class="card-carousel">
+      <div class="card-carousel--overflow-container">
+        <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + 'px' + ')'}">
+          <div class="card-carousel--card" v-for="item in items">
+            <div class="card-carousel--card--footer">
+              <p>{{ item.name }}</p>
+              <p>{{ item.tag }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-carousel--nav__right" @click="moveCarousel(1)" :disabled="atEndOfList"></div>
+  </div>
+</script>
+<div id="app"> 
+  <carousel>北京</carousel>
+</div>
+
+	<script src="../../js/vue.min.js"></script>
+	<script src="../../js/script2.js"></script>
+</div>
+</section2>
+</div>
+</body>
+</html>
